@@ -119,7 +119,7 @@ module networkManager_securityAdminConfigurations 'securityAdminConfigurations/d
     ruleCollections: contains(securityAdminConfiguration, 'ruleCollections') ? securityAdminConfiguration.ruleCollections : []
     enableDefaultTelemetry: enableReferencedModulesTelemetry
   }
-  dependsOn: networkGroups
+  //dependsOn: networkGroups
 }]
 
 resource networkManager_lock 'Microsoft.Authorization/locks@2020-05-01' = if (!empty(lock)) {
